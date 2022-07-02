@@ -1,16 +1,17 @@
 // In this file you can configure migrate-mongo
 
-const config = {
+module.exports = {
   mongodb: {
     // TODO Change (or review) the url to your MongoDB:
-    url: "mongodb://localhost:27017",
+    //url: "mongodb://admin:admin@localhost",
+    //url: "mongodb://localhost:27017",
+    url: "mongodb://admin:admin@172.17.0.3:27017/database_teste?authSource=admin",
 
     // TODO Change this to your database name:
-    databaseName: "YOURDATABASENAME",
+    //databaseName: "YOURDATABASENAME",
 
     options: {
-      useNewUrlParser: true, // removes a deprecation warning when connecting
-      useUnifiedTopology: true, // removes a deprecating warning when connecting
+      useNewUrlParser: true // removes a deprecation warning when connecting
       //   connectTimeoutMS: 3600000, // increase connection timeout to 1 hour
       //   socketTimeoutMS: 3600000, // increase socket timeout to 1 hour
     }
@@ -25,12 +26,7 @@ const config = {
   // The file extension to create migrations and search for in migration dir 
   migrationFileExtension: ".js",
 
-  // Enable the algorithm to create a checksum of the file contents and use that in the comparison to determine
+  // Enable the algorithm to create a checksum of the file contents and use that in the comparison to determin
   // if the file should be run.  Requires that scripts are coded to be run multiple times.
-  useFileHash: false,
-
-  // Don't change this, unless you know what you're doing
-  moduleSystem: 'commonjs',
+  useFileHash: false
 };
-
-module.exports = config;
