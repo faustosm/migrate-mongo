@@ -17,11 +17,9 @@ pipeline {
                 sh  'npm version' 
             }
         }
-        stage (' TELNET MongoDB ') {
+        stage (' migrate-mongo Status ') {
             steps {
-                sh 'apt-get update -y'
-                sh'apt-get install telnet -y'
-                sh  'telnet 172.17.0.3 27017'
+                sh 'migrate-mongo status'
             }
         }            
     }
