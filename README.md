@@ -8,3 +8,5 @@ migrate-mongo status
 migrate-mongo up
 
 migrate-mongo down
+
+cd /usr/local/lib/node_modules/migrate-mongo/node_modules/whatwg-url/lib

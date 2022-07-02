@@ -1,9 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:latest'
-//            image 'node:10.0.0' 
-//            args '-p 3000:3000 -u root ' 
+            image 'node:12.0.0'
         }
     }
     stages {
@@ -12,16 +10,10 @@ pipeline {
                 sh  'npm install'
             }
         }
-        stage (' Install migrate-mongo ') {
+        stage ('Install migrate-mongo') {
             steps {
                 sh  'npm install -g migrate-mongo'
-                sh  'npm version' 
             }
         }
-        stage (' migrate-mongo Status ') {
-            steps {
-                sh 'migrate-mongo status'
-            }
-        }            
     }
 }
