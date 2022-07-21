@@ -1,11 +1,15 @@
 // In this file you can configure migrate-mongo
 
+
+
 module.exports = {
   mongodb: {
     // TODO Change (or review) the url to your MongoDB:
     //url: "mongodb://admin:admin@localhost",
     //url: "mongodb://localhost:27017",
-    url: "mongodb://admin:admin@172.17.0.3:27017/database_teste?authSource=admin",
+    //url: "mongodb://"+process.env.MONGODB_USER+":"+process.env.MONGODB_PASS+"@"+process.env.:27017/database_teste?authSource=admin",
+    url: "mongodb+srv://"+process.env.MONGODB_USER+":"+process.env.MONGODB_PASS+"@"+process.env.MONGODB_HOST+"/"+process.env.MONGODB_DATABASE
+
 
     // TODO Change this to your database name:
     //databaseName: "YOURDATABASENAME",
