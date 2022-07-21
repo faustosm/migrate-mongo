@@ -1,7 +1,7 @@
 // In this file you can configure migrate-mongo
 
 console.log(process.env.MONGODB_USER)
-console.log(process.env.MONGODB_PASS)
+console.log(Buffer.from(process.env.MONGODB_PASS).toString('utf8'))
 console.log(process.env.MONGODB_HOST)
 console.log(process.env.MONGODB_DATABASE)
 
