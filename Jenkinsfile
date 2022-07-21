@@ -16,7 +16,6 @@ pipeline {
                 sh  'npm install -g migrate-mongo'
                 sh  'migrate-mongo --version'
   
-                sh  'MONGODB_USER=mongodevportopag MONGODB_PASS=GQrlZhN94xgZaNkv MONGODB_HOST=devclmeiospagamento-pl-0.mzlfw.mongodb.net MONGODB_DATABASE=meiospagamento migrate-mongo status'
             }
         }
     }
