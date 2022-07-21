@@ -15,7 +15,7 @@ pipeline {
                 
                 sh  'npm install -g migrate-mongo'
                 sh  'migrate-mongo --version'
-                sh  'migrate-mongo --status'
+                sh  'migrate-mongo status'
             }
         }
     }
