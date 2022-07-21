@@ -11,7 +11,7 @@ pipeline {
                 sh 'export MONGODB_USER=mongodevportopag'
                 sh 'export MONGODB_PASS=GQrlZhN94xgZaNkv'
                 sh 'export MONGODB_HOST=devclmeiospagamento-pl-0.mzlfw.mongodb.net'
-                Sh 'export MONGODB_DATABASE=meiospagamento'
+                sh 'export MONGODB_DATABASE=meiospagamento'
                 
                 sh  'npm install -g migrate-mongo'
                 sh  'migrate-mongo --version'
